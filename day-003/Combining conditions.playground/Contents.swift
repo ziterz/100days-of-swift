@@ -16,21 +16,21 @@ if age1 > 18 || age2 > 18 {
 var isOwner: Bool = true, isAdmin: Bool = true, isEditingEnabled: Bool = true
 
 if isOwner == true || isAdmin == true {
-    print("You can delete this post")
+  print("You can delete this post")
 }
 
 if isOwner == true && isEditingEnabled || isAdmin == true {
-    print("You can delete this post")
+  print("You can delete this post")
 }
 
 if (isOwner == true && isEditingEnabled) || isAdmin == true {
-    print("You can delete this post")
+  print("You can delete this post")
 }
 
 if isOwner == true && (isEditingEnabled || isAdmin == true) {
-    print("You can delete this post")
+  print("You can delete this post")
 }
 
 if (isOwner == true && isEditingEnabled) || isAdmin == true {
-    print("You can delete this post")
+  print("You can delete this post")
 }

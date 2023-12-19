@@ -6,24 +6,24 @@ let weather = "sunny"
 
 switch weather {
 case "rain":
-    print("Bring an umbrella")
+  print("Bring an umbrella")
 case "snow":
-    print("Wrap up warm")
+  print("Wrap up warm")
 case "sunny":
-    print("Wear sunscreen")
+  print("Wear sunscreen")
 default:
-    print("Enjoy your day!")
+  print("Enjoy your day!")
 }
 
 // If you want execution to continue on to the next case, use the fallthrough keyword
 switch weather {
 case "rain":
-    print("Bring an umbrella")
+  print("Bring an umbrella")
 case "snow":
-    print("Wrap up warm")
+  print("Wrap up warm")
 case "sunny":
-    print("Wear sunscreen")
-    fallthrough
+  print("Wear sunscreen")
+  fallthrough
 default:
-    print("Enjoy your day!")
+  print("Enjoy your day!")
 }

@@ -16,7 +16,7 @@ let isAuthenticated = true
 print(isAuthenticated ? "Welcome!" : "Who are you?")
 
 if isAuthenticated {
-    print("Welcome")
+  print("Welcome")
 } else {
-    print("Who are you?")
+  print("Who are you?")
 }
