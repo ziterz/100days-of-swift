@@ -15,10 +15,10 @@ let earth = Planet(rawValue: 2)
 
 // Now Swift will assign 1 to mercury and count upwards from there
 enum Planet2: Int {
-    case mercury = 1
-    case venus
-    case earth
-    case mars
+  case mercury = 1
+  case venus
+  case earth
+  case mars
 }
 
 // Result: "venus"
