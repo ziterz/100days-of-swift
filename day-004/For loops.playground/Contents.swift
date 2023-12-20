@@ -29,11 +29,11 @@ for name in names {
 let names2 = ["Sterling", "Cyril", "Lana", "Ray", "Pam"]
 
 for name in names2 {
-    print("\(name) is a secret agent")
+  print("\(name) is a secret agent")
 }
 
 let names3 = ["Sterling", "Cyril", "Lana", "Ray", "Pam"]
 
 for _ in names3 {
-    print("[CENSORED] is a secret agent!")
+  print("[CENSORED] is a secret agent!")
 }
