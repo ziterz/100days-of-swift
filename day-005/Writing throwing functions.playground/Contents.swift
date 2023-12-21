@@ -3,7 +3,7 @@
 import UIKit
 
 enum PasswordError: Error {
-    case obvious
+  case obvious
 }
 
 func checkPassword(_ password: String) throws -> Bool {
