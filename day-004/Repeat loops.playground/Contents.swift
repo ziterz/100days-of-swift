@@ -20,3 +20,20 @@ while false {
 repeat {
   print("This is false")
 } while false
+
+// shuffle an array with built-in function .shuffled()
+let numbers = [1, 2, 3, 4, 5]
+var random = numbers.shuffled()
+
+// using while to make sure not generating the same value as before
+while random == numbers {
+  random = numbers.shuffled()
+}
+
+// to avoid DRY code, you can use repeat like this
+let numbers2 = [1, 2, 3, 4, 5]
+var random2: [Int]
+
+repeat {
+  random2 = numbers2.shuffled()
+} while random2 == numbers2
