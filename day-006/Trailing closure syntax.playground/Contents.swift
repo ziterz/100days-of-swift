@@ -28,6 +28,7 @@ animate(duration: 3, animations: {
 animate(duration: 3) {
   print("Fade out the image")
 }
+
 /*
  * VALID SYNTAX
  */
