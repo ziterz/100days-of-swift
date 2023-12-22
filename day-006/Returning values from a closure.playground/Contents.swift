@@ -32,9 +32,9 @@ let payment3 = { () -> Bool in
   return true
 }
 
-/* ========================
+/*
  * VALID SYNTAX
- * ======================== */
+ */
 
 var flyDrone = { (hasPermit: Bool) -> Bool in
   if hasPermit {
