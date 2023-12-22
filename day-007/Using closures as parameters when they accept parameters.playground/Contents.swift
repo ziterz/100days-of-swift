@@ -21,6 +21,7 @@ let changeSpeed = { (speed: Int) in
 func buildCar(name: String, engine: (Int) -> Void) {
   // build the car
 }
+
 /*
  * VALID SYNTAX
  */
