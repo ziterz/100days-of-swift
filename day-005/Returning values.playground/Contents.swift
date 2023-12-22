@@ -31,11 +31,11 @@ func greet(name: String) -> String {
 greet(name: "Ziady")
 
 func greet2(name: String) -> String {
-    if name == "Taylor Swift" {
-      "Oh wow!"
-    } else {
-      "Hello, \(name)"
-    }
+  if name == "Taylor Swift" {
+    "Oh wow!"
+  } else {
+    "Hello, \(name)"
+  }
 }
 
 greet2(name: "Ziady")

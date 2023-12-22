@@ -15,7 +15,7 @@ func sayHello(to name: String) {
 sayHello(to: "Taylor")
 
 func setReactorStatus(primaryActive: Bool, backupActive: Bool, isEmergency: Bool) {
-    // code here
+  // code here
 }
 
 setReactorStatus(primaryActive: true, backupActive: true, isEmergency: false)

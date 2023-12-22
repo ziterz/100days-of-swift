@@ -13,7 +13,7 @@ greet("Taylor")
 greet("Taylor", nicely: false)
 
 func findDirections(from: String, to: String, route: String = "fastest", avoidHighways: Bool = false) {
-    // code here
+  // code here
 }
 
 findDirections(from: "London", to: "Glasgow")
