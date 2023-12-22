@@ -29,11 +29,11 @@ func throwingFunction3() throws {}
 
 // Why does Swift make us use try before every throwing function?
 do {
-    try throwingFunction1()
-    nonThrowingFunction1()
-    try throwingFunction2()
-    nonThrowingFunction2()
-    try throwingFunction3()
+  try throwingFunction1()
+  nonThrowingFunction1()
+  try throwingFunction2()
+  nonThrowingFunction2()
+  try throwingFunction3()
 } catch {
-    // handle errors
+  // handle errors
 }
