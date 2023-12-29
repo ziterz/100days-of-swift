@@ -6,18 +6,18 @@ var action: String
 var person = "hater"
 
 if person == "hater" {
-    action = "hate"
+  action = "hate"
 }
 
 var action: String
 var person = "hater"
 
 if person == "hater" {
-    action = "hate"
+  action = "hate"
 } else if person == "player" {
-    action = "play"
+  action = "play"
 } else {
-    action = "cruise"
+  action = "cruise"
 }
 
 // Evaluating multiple conditions
@@ -26,10 +26,10 @@ var stayOutTooLate = true
 var nothingInBrain = true
 
 if stayOutTooLate && nothingInBrain {
-    action = "cruise"
+  action = "cruise"
 }
 
 // Looking for the opposite of truth
 if !stayOutTooLate && !nothingInBrain {
-    action = "cruise"
+  action = "cruise"
 }

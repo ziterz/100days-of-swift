@@ -36,14 +36,14 @@ var people = ["players", "haters", "heart-breakers", "fakers"]
 var actions = ["play", "hate", "break", "fake"]
 
 for i in 0...3 {
-    print("\(people[i]) gonna \(actions[i])")
+  print("\(people[i]) gonna \(actions[i])")
 }
 
 var people = ["players", "haters", "heart-breakers", "fakers"]
 var actions = ["play", "hate", "break", "fake"]
 
 for i in 0..<people.count {
-    print("\(people[i]) gonna \(actions[i])")
+  print("\(people[i]) gonna \(actions[i])")
 }
 
 // MARK: Inner loops
@@ -51,33 +51,33 @@ var people = ["players", "haters", "heart-breakers", "fakers"]
 var actions = ["play", "hate", "break", "fake"]
 
 for i in 0..<people.count {
-    var str = "\(people[i]) gonna"
+  var str = "\(people[i]) gonna"
 
-    for _ in 1...5 {
-        str += " \(actions[i])"
-    }
+  for _ in 1...5 {
+    str += " \(actions[i])"
+  }
 
-    print(str)
+  print(str)
 }
 
 // MARK: While loops
 var counter = 0
 
 while true {
-    print("Counter is now \(counter)")
-    counter += 1
+  print("Counter is now \(counter)")
+  counter += 1
 
-    if counter == 556 {
-        break
-    }
+  if counter == 556 {
+    break
+  }
 }
 
 var songs = ["Shake it Off", "You Belong with Me", "Look What You Made Me Do"]
 
 for song in songs {
-    if song == "You Belong with Me" {
-        continue
-    }
+  if song == "You Belong with Me" {
+    continue
+  }
 
-    print("My favorite song is \(song)")
+  print("My favorite song is \(song)")
 }

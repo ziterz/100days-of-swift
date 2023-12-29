@@ -6,16 +6,16 @@ let liveAlbums = 2
 
 switch liveAlbums {
 case 0:
-    print("You're just starting out")
+  print("You're just starting out")
 
 case 1:
-    print("You just released iTunes Live From SoHo")
+  print("You just released iTunes Live From SoHo")
 
 case 2:
-    print("You just released Speak Now World Tour")
+  print("You just released Speak Now World Tour")
 
 default:
-    print("Have you done something new?")
+  print("Have you done something new?")
 }
 
 let studioAlbums = 5
@@ -25,11 +25,11 @@ case 0...1:
   fallthrough
 
 case 2...3:
-    print("You're a rising star")
+  print("You're a rising star")
 
 case 4...5:
-    print("You're world famous!")
+  print("You're world famous!")
 
 default:
-    print("Have you done something new?")
+  print("Have you done something new?")
 }
