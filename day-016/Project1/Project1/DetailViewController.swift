@@ -10,11 +10,13 @@ import UIKit
 class DetailViewController: UIViewController {
   @IBOutlet var imageView: UIImageView!
   var selectedImage: String?
+  var row: Int = 0
+  var totalRow: Int = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = selectedImage
+    title = "Picture \(row+1) of \(totalRow)"
     navigationItem.largeTitleDisplayMode = .never
     
     if let imageToLoad = selectedImage {
