@@ -1,23 +1,22 @@
 //
 //  DetailViewController.swift
-//  Project1
+//  Challenge
 //
-//  Created by Ziady Mubaraq on 30/12/23.
+//  Created by Ziady Mubaraq on 01/01/24.
 //
 
 import UIKit
 
 class DetailViewController: UIViewController {
+
+  // MARK: Builder Interface
   @IBOutlet var imageView: UIImageView!
+  
+  // MARK: Properties
   var selectedImage: String?
-  var row: Int = 0
-  var totalRow: Int = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    title = "Picture \(row+1) of \(totalRow)"
-    navigationItem.largeTitleDisplayMode = .never
     
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
     
@@ -26,19 +25,9 @@ class DetailViewController: UIViewController {
     }
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    navigationController?.hidesBarsOnTap = true
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    navigationController?.hidesBarsOnTap = false
-  }
-  
   @objc func shareTapped() {
-    guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else {
-      print("No image found")
+    guard let image = imageView.image?.jpegData(compressionQuality: 1.0) else {
+      print("Image not found")
       return
     }
     
