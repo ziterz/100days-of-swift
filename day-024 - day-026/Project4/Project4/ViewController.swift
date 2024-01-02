@@ -41,7 +41,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     
-    let url = URL(string: "https://" + websites[1])!
+    let url = URL(string: "https://" + websites[0])!
     webView.load(URLRequest(url: url))
     webView.allowsBackForwardNavigationGestures = true
   }
@@ -51,6 +51,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     for website in websites {
       ac.addAction(UIAlertAction(title: website, style: .default, handler: openPage))
     }
+    ac.addAction(UIAlertAction(title: "google.com", style: .default, handler: openPage))
     ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
     ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
     present(ac, animated: true)
@@ -82,8 +83,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
           return
         }
       }
+      let ac = UIAlertController(title: "URL is blocked", message: nil, preferredStyle: .alert)
+      ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+      present(ac, animated: true)
     }
-    
     decisionHandler(.cancel)
   }
 }
