@@ -11,6 +11,7 @@ import WebKit
 class ViewController: UIViewController, WKNavigationDelegate {
 
   // MARK: Properties
+  var selectedUrl: String?
   var webView: WKWebView!
   var progressView: UIProgressView!
   var websites: [String] = ["apple.com", "ziterz.dev"]
@@ -43,8 +44,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
     navigationController?.isToolbarHidden = false
     
     webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-    
-    let url = URL(string: "https://" + websites[0])!
+    guard let firstUrl = selectedUrl else { return }
+    let url = URL(string: "https://" + firstUrl)!
     webView.load(URLRequest(url: url))
     webView.allowsBackForwardNavigationGestures = true
   }
