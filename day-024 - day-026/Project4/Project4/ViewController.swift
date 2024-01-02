@@ -12,6 +12,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
   // MARK: Properties
   var webView: WKWebView!
+  var progressView: UIProgressView!
   
   // MARK: Views
   
@@ -25,6 +26,19 @@ class ViewController: UIViewController, WKNavigationDelegate {
     super.viewDidLoad()
     
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
+    
+    let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
+    
+    progressView = UIProgressView(progressViewStyle: .default)
+    progressView.sizeToFit()
+    
+    let progress = UIBarButtonItem(customView: progressView)
+    
+    toolbarItems = [progress, spacer, refresh]
+    navigationController?.isToolbarHidden = false
+    
+    webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     
     let url = URL(string: "https://ziterz.dev")!
     webView.load(URLRequest(url: url))
@@ -48,6 +62,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
   
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
     title = webView.title
+  }
+  
+  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    if keyPath == "estimatedProgress" {
+      progressView.progress = Float(webView.estimatedProgress)
+    }
   }
 }
 
