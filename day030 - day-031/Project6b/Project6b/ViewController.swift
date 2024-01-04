@@ -69,7 +69,7 @@ class ViewController: UIViewController {
       //      label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
       label.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
       label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
-
+      
       label.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
       label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
       
