@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		75C12B3A2B4859690046F09D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C12B382B4859690046F09D /* LaunchScreen.storyboard */; };
 		75C12B432B485DAB0046F09D /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12B422B485DAB0046F09D /* Petition.swift */; };
 		75C12B452B485DD80046F09D /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12B442B485DD80046F09D /* Petitions.swift */; };
+		75C12B472B48632F0046F09D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12B462B48632F0046F09D /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		75C12B3B2B4859690046F09D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C12B422B485DAB0046F09D /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		75C12B442B485DD80046F09D /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		75C12B462B48632F0046F09D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				75C12B2D2B4859670046F09D /* AppDelegate.swift */,
 				75C12B2F2B4859670046F09D /* SceneDelegate.swift */,
 				75C12B312B4859670046F09D /* ViewController.swift */,
+				75C12B462B48632F0046F09D /* DetailViewController.swift */,
 				75C12B332B4859670046F09D /* Main.storyboard */,
 				75C12B362B4859690046F09D /* Assets.xcassets */,
 				75C12B382B4859690046F09D /* LaunchScreen.storyboard */,
@@ -110,6 +113,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
+				ORGANIZATIONNAME = ziterz.dev;
 				TargetAttributes = {
 					75C12B292B4859670046F09D = {
 						CreatedOnToolsVersion = 15.1;
@@ -117,7 +121,7 @@
 				};
 			};
 			buildConfigurationList = 75C12B252B4859670046F09D /* Build configuration list for PBXProject "Project7" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -155,6 +159,7 @@
 				75C12B322B4859670046F09D /* ViewController.swift in Sources */,
 				75C12B432B485DAB0046F09D /* Petition.swift in Sources */,
 				75C12B2E2B4859670046F09D /* AppDelegate.swift in Sources */,
+				75C12B472B48632F0046F09D /* DetailViewController.swift in Sources */,
 				75C12B302B4859670046F09D /* SceneDelegate.swift in Sources */,
 				75C12B452B485DD80046F09D /* Petitions.swift in Sources */,
 			);

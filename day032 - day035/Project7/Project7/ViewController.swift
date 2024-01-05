@@ -3,13 +3,16 @@
 //  Project7
 //
 //  Created by Ziady Mubaraq on 05/01/24.
+//  Copyright © 2024 ziterz.dev. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UITableViewController {
+  // MARK: Properties
   var petitions = [Petition]()
-
+  
+  // MARK: Views
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -29,7 +32,7 @@ class ViewController: UITableViewController {
       tableView.reloadData()
     }
   }
-
+  
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return petitions.count
   }
@@ -40,6 +43,12 @@ class ViewController: UITableViewController {
     cell.textLabel?.text = petition.title
     cell.detailTextLabel?.text = petition.body
     return cell
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let vc = DetailViewController()
+    vc.detailItem = petitions[indexPath.row]
+    navigationController?.pushViewController(vc, animated: true)
   }
 }
 
