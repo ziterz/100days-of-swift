@@ -6,14 +6,18 @@
 //
 
 import UIKit
-
+struct Sample {
+  var name: String?
+}
 class ViewController: UITableViewController {
   // MARK: properties
   var pictures = [String]()
+  var data = Sample()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    data.name = "Hi"
     title = "Storm Viewer"
     navigationController?.navigationBar.prefersLargeTitles = true
     
