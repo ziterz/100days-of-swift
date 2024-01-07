@@ -24,6 +24,7 @@ class ViewController: UIViewController {
       scoreLabel.text = "Score : \(score)"
     }
   }
+  var answering = 0
   var level = 1
   
   // MARK: Views
@@ -83,6 +84,8 @@ class ViewController: UIViewController {
     // MARK: Buttons View
     let buttonsView = UIView()
     buttonsView.translatesAutoresizingMaskIntoConstraints = false
+    buttonsView.layer.borderWidth = 1
+    buttonsView.layer.borderColor = UIColor.gray.cgColor
     view.addSubview(buttonsView)
     
     NSLayoutConstraint.activate([
@@ -98,7 +101,7 @@ class ViewController: UIViewController {
       answersLabel.heightAnchor.constraint(equalTo: cluesLabel.heightAnchor),
       
       currentAnswer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-      currentAnswer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+      currentAnswer.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.5),
       currentAnswer.topAnchor.constraint(equalTo: cluesLabel.bottomAnchor, constant: 20),
       
       submit.topAnchor.constraint(equalTo: currentAnswer.bottomAnchor),
@@ -162,14 +165,22 @@ class ViewController: UIViewController {
       
       currentAnswer.text = ""
       score += 1
+      answering += 1
       
       scoreLabel.text = "Score : \(score)"
       
-      if score % 7 == 0 {
+      if answering % 7 == 0 {
         let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Let's go", style: .default, handler: levelUp))
         present(ac, animated: true)
       }
+    } else {
+      if score != 0 {
+        score -= 1
+      }
+      let ac = UIAlertController(title: "Incorrect", message: "Your answer is wrong", preferredStyle: .alert)
+      ac.addAction(UIAlertAction(title: "OK", style: .default))
+      present(ac, animated: true)
     }
   }
   
