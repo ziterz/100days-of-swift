@@ -115,7 +115,9 @@ class ViewController: UITableViewController {
       //    tableView.reloadData()
       
       // MARK: alternative 2 for GCD
-      tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+      DispatchQueue.main.async { [weak self] in
+        self?.tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+      }
     } else {
       performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
     }

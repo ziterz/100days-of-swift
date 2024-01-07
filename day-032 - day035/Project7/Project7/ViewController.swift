@@ -30,15 +30,16 @@ class ViewController: UITableViewController {
     } else {
       urlString = "http://hackingwithswift.com/samples/petitions-2.json"
     }
-    
-    if let url = URL(string: urlString) {
-      if let data = try? Data(contentsOf: url) {
-        parse(json: data)
-        return
+    DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+      if let url = URL(string: urlString) {
+        if let data = try? Data(contentsOf: url) {
+          self?.parse(json: data)
+          return
+        }
       }
+      
+      self?.showError()
     }
-    
-    showError()
   }
   
   @objc func showCredit() {
@@ -76,11 +77,15 @@ class ViewController: UITableViewController {
   }
   
   func parse(json: Data) {
-    let decoder = JSONDecoder()
-    if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
-      petitions = jsonPetitions.results
-      filteredPetitions = jsonPetitions.results
-      tableView.reloadData()
+    DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+      let decoder = JSONDecoder()
+      if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
+        self?.petitions = jsonPetitions.results
+        self?.filteredPetitions = jsonPetitions.results
+        DispatchQueue.main.async { [weak self] in
+          self?.tableView.reloadData()
+        }
+      }
     }
   }
   
