@@ -19,7 +19,11 @@ class ViewController: UIViewController {
   var activatedButtons = [UIButton]()
   var solutions = [String]()
   
-  var score = 0
+  var score = 0 {
+    didSet {
+      scoreLabel.text = "Score : \(score)"
+    }
+  }
   var level = 1
   
   // MARK: Views
@@ -158,6 +162,8 @@ class ViewController: UIViewController {
       
       currentAnswer.text = ""
       score += 1
+      
+      scoreLabel.text = "Score : \(score)"
       
       if score % 7 == 0 {
         let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
