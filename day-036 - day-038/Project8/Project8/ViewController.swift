@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     // MARK: Score Label
     scoreLabel = UILabel()
     scoreLabel.translatesAutoresizingMaskIntoConstraints = false
-    scoreLabel.textAlignment = .right
+    scoreLabel.textAlignment = .righ
     scoreLabel.text = "Score: 0"
     view.addSubview(scoreLabel)
     
@@ -92,7 +92,8 @@ class ViewController: UIViewController {
       scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
       scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: 0),
       
-      cluesLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),cluesLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100),
+      cluesLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
+      cluesLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100),
       cluesLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.6, constant: -100),
       
       answersLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
