@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     // MARK: Score Label
     scoreLabel = UILabel()
     scoreLabel.translatesAutoresizingMaskIntoConstraints = false
-    scoreLabel.textAlignment = .righ
+    scoreLabel.textAlignment = .right
     scoreLabel.text = "Score: 0"
     view.addSubview(scoreLabel)
     
