@@ -4,7 +4,6 @@
 # Certificate
 ![certificate](https://private-user-images.githubusercontent.com/16526236/295911789-32efed9a-e191-4127-9406-cee897a50fa1.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDQ5NzYzMTMsIm5iZiI6MTcwNDk3NjAxMywicGF0aCI6Ii8xNjUyNjIzNi8yOTU5MTE3ODktMzJlZmVkOWEtZTE5MS00MTI3LTk0MDYtY2VlODk3YTUwZmExLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTExVDEyMjY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWU4MjU5OWYyMjg1MTdiODY4YzgzNjAzOTY5MWIzYzEwM2Q2NmIwZjUyMDI2Yzk5MmUyZWQ3MGRjODA5YmQxNTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.CjynDd48OO0eikdEm14jOM6Fe1AuM4ijgroQL2v2HJQ)
 
-I have completed the exam for 100 Days of Swift with a score of 89/100. I will continue to work on the projects and improve my score.
+I have completed the exam for 100 Days of Swift and earned a **Certificate of Distinction**. I will continue working on the projects to improve my score.
 
-Thanks to Paul Hudson for the great course.
-@twostraws
+Thanks to Paul Hudson for the great course. @twostraws
